@@ -93,3 +93,13 @@ nav.addEventListener("mouseover", (e) => {
 nav.addEventListener("mouseout", (e) => {
   handleHover(e, 1);
 });
+
+// sticky naviataion
+const initialCoords = section1.getBoundingClientRect();
+window.addEventListener("scroll", (e) => {
+  if (window.scrollY > initialCoords.top) {
+    nav.classList.add("sticky");
+  } else {
+    nav.classList.remove("sticky");
+  }
+});
