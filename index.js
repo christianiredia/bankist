@@ -183,4 +183,15 @@ const nextSlide = () => {
   }
   goToSlide(curSlide);
 };
+
+const prevSlide = () => {
+  if (curSlide === 0) {
+    curSlide = maxSlide - 1;
+  } else {
+    curSlide--;
+  }
+  goToSlide(curSlide);
+};
+
 btnRight.addEventListener("click", nextSlide);
+btnLeft.addEventListener("click", prevSlide);
